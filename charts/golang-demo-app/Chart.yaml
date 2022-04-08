@@ -1,0 +1,11 @@
+apiVersion: v2
+appVersion: 1.0.0
+description: Golang Demo App
+engine: gotpl
+name: golang-demo-app
+version: 0.0.1
+keywords:
+  - golang-demo-app
+maintainers:
+  - email: jordan.goasdoue@dailymotion.com
+    name: Jordan Goasdoué

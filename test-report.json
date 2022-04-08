@@ -1,0 +1,66 @@
+{"Time":"2021-09-27T16:10:04.791568191Z","Action":"run","Package":"github.com/dailymotion/golang-demo-app/math","Test":"TestAdd"}
+{"Time":"2021-09-27T16:10:04.793011145Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Test":"TestAdd","Output":"=== RUN   TestAdd\n"}
+{"Time":"2021-09-27T16:10:04.793039264Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Test":"TestAdd","Output":"--- PASS: TestAdd (0.00s)\n"}
+{"Time":"2021-09-27T16:10:04.793046214Z","Action":"pass","Package":"github.com/dailymotion/golang-demo-app/math","Test":"TestAdd","Elapsed":0}
+{"Time":"2021-09-27T16:10:04.793053813Z","Action":"run","Package":"github.com/dailymotion/golang-demo-app/math","Test":"ExampleAdd"}
+{"Time":"2021-09-27T16:10:04.793058659Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Test":"ExampleAdd","Output":"=== RUN   ExampleAdd\n"}
+{"Time":"2021-09-27T16:10:04.793064309Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Test":"ExampleAdd","Output":"--- PASS: ExampleAdd (0.00s)\n"}
+{"Time":"2021-09-27T16:10:04.793070077Z","Action":"pass","Package":"github.com/dailymotion/golang-demo-app/math","Test":"ExampleAdd","Elapsed":0}
+{"Time":"2021-09-27T16:10:04.793075964Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Output":"PASS\n"}
+{"Time":"2021-09-27T16:10:04.793081264Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Output":"coverage: 50.0% of statements\n"}
+{"Time":"2021-09-27T16:10:04.793186962Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Output":"ok  \tgithub.com/dailymotion/golang-demo-app/math\t0.002s\tcoverage: 50.0% of statements\n"}
+{"Time":"2021-09-27T16:10:04.793197792Z","Action":"pass","Package":"github.com/dailymotion/golang-demo-app/math","Elapsed":0.003}
+{"Time":"2021-09-27T16:10:04.794087103Z","Action":"run","Package":"github.com/dailymotion/golang-demo-app/math2","Test":"TestAdd"}
+{"Time":"2021-09-27T16:10:04.794125324Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math2","Test":"TestAdd","Output":"=== RUN   TestAdd\n"}
+{"Time":"2021-09-27T16:10:04.794136827Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math2","Test":"TestAdd","Output":"--- PASS: TestAdd (0.00s)\n"}
+{"Time":"2021-09-27T16:10:04.794142652Z","Action":"pass","Package":"github.com/dailymotion/golang-demo-app/math2","Test":"TestAdd","Elapsed":0}
+{"Time":"2021-09-27T16:10:04.794148037Z","Action":"run","Package":"github.com/dailymotion/golang-demo-app/math2","Test":"ExampleAdd"}
+{"Time":"2021-09-27T16:10:04.794153632Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math2","Test":"ExampleAdd","Output":"=== RUN   ExampleAdd\n"}
+{"Time":"2021-09-27T16:10:04.794160788Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math2","Test":"ExampleAdd","Output":"--- PASS: ExampleAdd (0.00s)\n"}
+{"Time":"2021-09-27T16:10:04.794165949Z","Action":"pass","Package":"github.com/dailymotion/golang-demo-app/math2","Test":"ExampleAdd","Elapsed":0}
+{"Time":"2021-09-27T16:10:04.794170527Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math2","Output":"PASS\n"}
+{"Time":"2021-09-27T16:10:04.794222331Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math2","Output":"coverage: 50.0% of statements\n"}
+{"Time":"2021-09-27T16:10:04.797889403Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math2","Output":"ok  \tgithub.com/dailymotion/golang-demo-app/math2\t0.006s\tcoverage: 50.0% of statements\n"}
+{"Time":"2021-09-27T16:10:04.797910481Z","Action":"pass","Package":"github.com/dailymotion/golang-demo-app/math2","Elapsed":0.006}
+{"Time":"2021-09-27T16:10:05.088766231Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app","Output":"?   \tgithub.com/dailymotion/golang-demo-app\t[no test files]\n"}
+{"Time":"2021-09-27T16:10:05.088803554Z","Action":"skip","Package":"github.com/dailymotion/golang-demo-app","Elapsed":0}
+{"Time":"2021-09-27T16:11:30.351625073Z","Action":"run","Package":"github.com/dailymotion/golang-demo-app/math","Test":"TestAdd"}
+{"Time":"2021-09-27T16:11:30.351775184Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Test":"TestAdd","Output":"=== RUN   TestAdd\n"}
+{"Time":"2021-09-27T16:11:30.351788302Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Test":"TestAdd","Output":"--- PASS: TestAdd (0.00s)\n"}
+{"Time":"2021-09-27T16:11:30.35179588Z","Action":"pass","Package":"github.com/dailymotion/golang-demo-app/math","Test":"TestAdd","Elapsed":0}
+{"Time":"2021-09-27T16:11:30.351802108Z","Action":"run","Package":"github.com/dailymotion/golang-demo-app/math","Test":"ExampleAdd"}
+{"Time":"2021-09-27T16:11:30.351806407Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Test":"ExampleAdd","Output":"=== RUN   ExampleAdd\n"}
+{"Time":"2021-09-27T16:11:30.351811901Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Test":"ExampleAdd","Output":"--- PASS: ExampleAdd (0.00s)\n"}
+{"Time":"2021-09-27T16:11:30.351817289Z","Action":"pass","Package":"github.com/dailymotion/golang-demo-app/math","Test":"ExampleAdd","Elapsed":0}
+{"Time":"2021-09-27T16:11:30.351823982Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Output":"PASS\n"}
+{"Time":"2021-09-27T16:11:30.351828769Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Output":"coverage: 50.0% of statements\n"}
+{"Time":"2021-09-27T16:11:30.352132954Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Output":"ok  \tgithub.com/dailymotion/golang-demo-app/math\t0.001s\tcoverage: 50.0% of statements\n"}
+{"Time":"2021-09-27T16:11:30.352149656Z","Action":"pass","Package":"github.com/dailymotion/golang-demo-app/math","Elapsed":0.002}
+{"Time":"2021-09-27T16:11:30.353056272Z","Action":"run","Package":"github.com/dailymotion/golang-demo-app/math2","Test":"TestAdd"}
+{"Time":"2021-09-27T16:11:30.353085244Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math2","Test":"TestAdd","Output":"=== RUN   TestAdd\n"}
+{"Time":"2021-09-27T16:11:30.353099161Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math2","Test":"TestAdd","Output":"--- PASS: TestAdd (0.00s)\n"}
+{"Time":"2021-09-27T16:11:30.353105614Z","Action":"pass","Package":"github.com/dailymotion/golang-demo-app/math2","Test":"TestAdd","Elapsed":0}
+{"Time":"2021-09-27T16:11:30.35311108Z","Action":"run","Package":"github.com/dailymotion/golang-demo-app/math2","Test":"ExampleAdd"}
+{"Time":"2021-09-27T16:11:30.353115915Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math2","Test":"ExampleAdd","Output":"=== RUN   ExampleAdd\n"}
+{"Time":"2021-09-27T16:11:30.353125377Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math2","Test":"ExampleAdd","Output":"--- PASS: ExampleAdd (0.00s)\n"}
+{"Time":"2021-09-27T16:11:30.353132776Z","Action":"pass","Package":"github.com/dailymotion/golang-demo-app/math2","Test":"ExampleAdd","Elapsed":0}
+{"Time":"2021-09-27T16:11:30.353139564Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math2","Output":"PASS\n"}
+{"Time":"2021-09-27T16:11:30.353188022Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math2","Output":"coverage: 50.0% of statements\n"}
+{"Time":"2021-09-27T16:11:30.354374646Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math2","Output":"ok  \tgithub.com/dailymotion/golang-demo-app/math2\t0.003s\tcoverage: 50.0% of statements\n"}
+{"Time":"2021-09-27T16:11:30.354388318Z","Action":"pass","Package":"github.com/dailymotion/golang-demo-app/math2","Elapsed":0.003}
+{"Time":"2021-09-27T16:11:30.611624215Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app","Output":"?   \tgithub.com/dailymotion/golang-demo-app\t[no test files]\n"}
+{"Time":"2021-09-27T16:11:30.611646697Z","Action":"skip","Package":"github.com/dailymotion/golang-demo-app","Elapsed":0}
+{"Time":"2021-11-03T16:49:21.377376649Z","Action":"run","Package":"github.com/dailymotion/golang-demo-app/math","Test":"TestAdd"}
+{"Time":"2021-11-03T16:49:21.383453715Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Test":"TestAdd","Output":"=== RUN   TestAdd\n"}
+{"Time":"2021-11-03T16:49:21.38362284Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Test":"TestAdd","Output":"--- PASS: TestAdd (0.00s)\n"}
+{"Time":"2021-11-03T16:49:21.383703814Z","Action":"pass","Package":"github.com/dailymotion/golang-demo-app/math","Test":"TestAdd","Elapsed":0}
+{"Time":"2021-11-03T16:49:21.383772469Z","Action":"run","Package":"github.com/dailymotion/golang-demo-app/math","Test":"ExampleAdd"}
+{"Time":"2021-11-03T16:49:21.383830249Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Test":"ExampleAdd","Output":"=== RUN   ExampleAdd\n"}
+{"Time":"2021-11-03T16:49:21.38390484Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Test":"ExampleAdd","Output":"--- PASS: ExampleAdd (0.00s)\n"}
+{"Time":"2021-11-03T16:49:21.383969086Z","Action":"pass","Package":"github.com/dailymotion/golang-demo-app/math","Test":"ExampleAdd","Elapsed":0}
+{"Time":"2021-11-03T16:49:21.384044565Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Output":"PASS\n"}
+{"Time":"2021-11-03T16:49:21.384104181Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Output":"coverage: 50.0% of statements\n"}
+{"Time":"2021-11-03T16:49:21.384950692Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app/math","Output":"ok  \tgithub.com/dailymotion/golang-demo-app/math\t0.013s\tcoverage: 50.0% of statements\n"}
+{"Time":"2021-11-03T16:49:21.385061165Z","Action":"pass","Package":"github.com/dailymotion/golang-demo-app/math","Elapsed":0.014}
+{"Time":"2021-11-03T16:49:24.708269965Z","Action":"output","Package":"github.com/dailymotion/golang-demo-app","Output":"?   \tgithub.com/dailymotion/golang-demo-app\t[no test files]\n"}
+{"Time":"2021-11-03T16:49:24.708602825Z","Action":"skip","Package":"github.com/dailymotion/golang-demo-app","Elapsed":0}

@@ -1,0 +1,14 @@
+# Alfred is needed to execute this project locally
+# Documentation available here -> http://hub.dm.gg/alfred/
+# Download page here -> https://github.com/dailymotion/alfred/releases
+# Execute this following command to import the secrets -> "alfred project secrets import"
+version: '3.4'
+services:
+  app: &app
+    ports:
+      - 8080:8080
+    build:
+      args: []
+networks:
+  ns:
+    driver: bridge

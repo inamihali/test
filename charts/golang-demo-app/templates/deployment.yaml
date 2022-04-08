@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}
+  labels:
+    app.kubernetes.io/name: {{ .Chart.Name }}
+    helm.sh/chart: {{ .Chart.Name }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+{{- if not .Values.golangDemoApp.hpa.enabled }}
+{{- if .Values.golangDemoApp.replicas }}
+  replicas: {{ .Values.golangDemoApp.replicas | int }}
+{{- end }}
+{{- end }}
+  selector:
+    matchLabels:
+      service: {{ .Chart.Name }}
+  template:
+    metadata:
+      labels:
+        service: {{ .Chart.Name }}
+    spec:
+      imagePullSecrets:
+      - name: dailymotionadmin-puller-pull-secret
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ required "The image name must be defined" .Values.golangDemoApp.containers.golangDemoApp.image }}:{{ required "The image tag must be defined" .Values.golangDemoApp.imageTag }}"
+          imagePullPolicy: {{ default "" .Values.golangDemoApp.containers.golangDemoApp.imagePullPolicy | quote }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.containerPorts.http }}
+            - name: https
+              containerPort: {{ .Values.containerPorts.https }}
+          {{- if .Values.golangDemoApp.livenessProbe.enabled }}
+          livenessProbe:
+            httpGet:
+              path: /health/live
+              port: http
+              scheme: HTTP
+            initialDelaySeconds: {{ .Values.golangDemoApp.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.golangDemoApp.livenessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.golangDemoApp.livenessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.golangDemoApp.livenessProbe.failureThreshold }}
+            successThreshold: {{ .Values.golangDemoApp.livenessProbe.successThreshold }}
+          {{- end }}
+          {{- if .Values.golangDemoApp.readinessProbe.enabled }}
+          readinessProbe:
+            httpGet:
+              path: /health/ready
+              port: http
+              scheme: HTTP
+            initialDelaySeconds: {{ .Values.golangDemoApp.readinessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.golangDemoApp.readinessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.golangDemoApp.readinessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.golangDemoApp.readinessProbe.failureThreshold }}
+            successThreshold: {{ .Values.golangDemoApp.readinessProbe.successThreshold }}
+          {{- end }}
+          {{- if .Values.golangDemoApp.containers.resources }}
+          resources: {{- toYaml .Values.golangDemoApp.containers.resources | nindent 12 }}
+          {{- end }}

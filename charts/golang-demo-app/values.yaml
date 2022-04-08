@@ -1,0 +1,51 @@
+## Global Docker image parameters
+## Please, note that this will override the image parameters, including dependencies, configured to use the global value
+## Current available global Docker image parameters: imageRegistry and imagePullSecrets
+##
+global:
+  env: dev
+#   imageRegistry: myRegistryName
+#   imagePullSecrets:
+#     - myRegistryKeySecretName
+#   storageClass: myStorageClass
+
+golangDemoApp:
+  containers:
+    golangDemoApp:
+      image: quay.io/dailymotionadmin/golang-demo-app
+      imagePullPolicy: IfNotPresent
+    resources:
+      limits:
+        memory: 512Mi
+        cpu: 0.5
+      requests:
+        memory: 512Mi
+        cpu: 0.5
+  imageTag: "1.0.0"
+  rollingMaxSurge: 100%
+  rollingMaxUnavailable: 25%
+  hpa:
+    enabled: false
+    minReplicas: 2
+    maxReplicas: 6
+    targetCPUUtilizationPercentage: 40
+  livenessProbe:
+    enabled: true
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    timeoutSeconds: 3
+    failureThreshold: 3
+    successThreshold: 1
+  readinessProbe:
+    enabled: true
+    initialDelaySeconds: 1
+    periodSeconds: 10
+    timeoutSeconds: 3
+    failureThreshold: 3
+    successThreshold: 1
+
+## Container ports
+##
+containerPorts:
+  http: 8080
+  https: 8443

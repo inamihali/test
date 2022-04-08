@@ -1,0 +1,32 @@
+# Alfred is needed to execute this project locally
+# Documentation available here -> http://hub.dm.gg/alfred/
+# Download page here -> https://github.com/dailymotion/alfred/releases
+# Execute this following command to import the secrets -> "alfred project secrets import"
+version: '3.4'
+
+x-common-variables: &common-variables
+  HTTP_PROXY: http://gproxy.vip.dailymotion.com:8888/
+  HTTPS_PROXY: http://gproxy.vip.dailymotion.com:8888/
+
+services:
+  app: &app
+    build:
+      context: .
+    ports:
+      - 8080:8080
+    environment:
+      <<: *common-variables
+    networks:
+      - ns
+
+  test-unit:
+    image: golang:1.15
+    # go test -coverprofile coverage.out -json ./... >> test-report.json
+    command: sh -c 'go test -count=1 -coverprofile coverage.out -json ./... >> test-report.json'
+    working_dir: /go/src/go-with-compose
+    volumes:
+      - .:/go/src/go-with-compose
+    environment:
+      <<: *common-variables
+    networks:
+      - ns

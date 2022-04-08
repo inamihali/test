@@ -1,0 +1,25 @@
+# =====================================================
+#   Standard properties
+# =====================================================
+sonar.projectKey=golang-demo-app:master
+sonar.projectName=golang-demo-app
+# The version is computed when the build is made
+# sonar.projectVersion=$(git rev-parse --short HEAD)
+
+sonar.language=go
+sonar.sourceEncoding=UTF-8
+sonar.sources=.
+sonar.exclusions=**/*_test.go,**/vendor/**
+ 
+sonar.tests=.
+sonar.test.inclusions=**/*_test.go
+sonar.test.exclusions=**/vendor/**
+
+# =====================================================
+#   Properties specific to Go
+# =====================================================
+
+sonar.go.coverage.reportPaths=coverage.out
+sonar.go.tests.reportPaths=test-report.json
+# Temporary disabling dev SQ
+# sonar.host.url=https://sonarqube-dev.kube.dm.gg/

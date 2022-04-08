@@ -1,0 +1,15 @@
+{{- $ingressHost := include "ingressHost" . -}}
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ .Chart.Name }}{{ $ingressHost | replace "." "-" }}
+spec:
+  secretName: {{ .Chart.Name }}{{ $ingressHost | replace "." "-" }}-tls
+  duration: 120h0m0s
+  renewBefore: 72h0m0s
+  issuerRef:
+    name: prod-vault
+    kind: ClusterIssuer
+  commonName: {{ .Chart.Name }}{{ $ingressHost }}
+  dnsNames:
+  - {{ .Chart.Name }}{{ $ingressHost }}
