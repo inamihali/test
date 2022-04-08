@@ -2,14 +2,64 @@ kind: pipeline
 type: kubernetes
 name: default
 
+metadata:
+  namespace: drone
+  annotations:
+    mytestannotation: myfirsttesta
+  labels:
+    mytestlabel: myfirsttestl
+
 steps:
 - name: greeting
   image: alpine
   commands:
-  - echo hello
-  - echo world
+  - ls
+  - pwd
+- name: code-analysis
+  image: aosapps/drone-sonar-plugin:latest
+  pull: if-not-exists
+  settings:
+    sonar_host:
+      from_secret: sonar_host
+    sonar_token:
+      from_secret: sonar_token
+    usingProperties: true
+    sources: .
+    level: DEBUG
+    branchAnalysis: main
+    showProfiling: true
+    ver: 1.0
 - name: build
   image: golang
   commands:
     - go build
     - go test
+  volumes:
+  - name: cache
+    path: /go
+- name: docker
+  image: plugins/docker
+  settings:
+    username: admin
+    password: Harbor12345
+    repo: core-harbor-stg.kube.dm.gg/tekton/test
+    tags: latest
+    registry: core-harbor-stg.kube.dm.gg 
+- name: byebye
+  image: alpine
+  commands:
+  - ls
+  - echo "bye"
+  depends_on:
+  - code-analysis
+  - build
+  volumes:
+  - name: cache
+    path: /go 
+volumes:
+- name: cache
+  temp: {}
+trigger:
+  event:
+  - push
+  - pull_request

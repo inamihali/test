@@ -5,16 +5,16 @@ FROM golang:1.15-alpine AS builder
 
 # Create appuser
 ENV USER=appuser
-ENV UID=10001 
+ENV UID=10001
 
 # See https://stackoverflow.com/a/55757473/12429735RUN
-RUN adduser \    
-    --disabled-password \    
-    --gecos "" \    
-    --home "/nonexistent" \    
-    --shell "/sbin/nologin" \    
-    --no-create-home \    
-    --uid "${UID}" \    
+RUN adduser \
+    --disabled-password \
+    --gecos "" \
+    --home "/nonexistent" \
+    --shell "/sbin/nologin" \
+    --no-create-home \
+    --uid "${UID}" \
     "${USER}"
 
 WORKDIR /app
